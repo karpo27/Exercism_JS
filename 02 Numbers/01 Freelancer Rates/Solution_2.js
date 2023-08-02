@@ -2,11 +2,11 @@ const ratePerDay = 8;
 const daysperMonth = 22;
 
 function dayRate(ratePerHour) {
-  return ratePerHour * ratePerDay
+  return ratePerHour * ratePerDay;
 }
 
 function daysInBudget(budget, ratePerHour) {
-  return Math.floor(budget / dayRate(ratePerHour))
+  return Math.floor(budget / dayRate(ratePerHour));
 }
 
 function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
@@ -15,7 +15,7 @@ function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
   
   return Math.ceil(
     dayRate(ratePerHour) * daysperMonth * (discountMonth * (1 - discount) + remainingMonth)
-  )
+  );
 }
 
 export {dayRate, daysInBudget, priceWithMonthlyDiscount};
