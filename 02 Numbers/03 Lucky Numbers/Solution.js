@@ -18,7 +18,6 @@ function luckyNumber(value) {
 }
 
 function errorMessage(input) {
-  console.log(isNaN(Number(input)));
   if (input == "" || input == null || input == undefined){
     return "Required field";
   } else if (isNaN(Number(input)) == true || Number(input) == 0){
